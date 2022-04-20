@@ -9,7 +9,25 @@ function playRound(playerSelection, computerSelection){
         return "Draw!";
     }
 
+    if ((playerSelectionAnswer == "rock") && computerSelectionAnswer == "paper"){
+        return "You Lose, Paper beats Rock";
+
+    } else if((playerSelectionAnswer == "rock") && computerSelectionAnswer == "scissors"){
+        return "You win! Rock beats Scissors";
+    }
     
+    if((playerSelectionAnswer == "paper") && computerSelectionAnswer == "scissors"){
+        return "You Lose, Scissors beats Paper"
+    }else if((playerSelectionAnswer == "paper") && computerSelectionAnswer == "rock"){
+        return "You win! Paper beats Rock";
+    }
+    if((playerSelectionAnswer == "scissors") && computerSelectionAnswer == "rock"){
+        return "You Lose, Rock beats Scissors"
+    }else if((playerSelectionAnswer == "scissors") && computerSelectionAnswer == "paper"){
+        return "You win! Scissors beats ";
+    }
+
+    return "Invalid Input"
 
 }
 
