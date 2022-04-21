@@ -2,8 +2,8 @@
 
 function playRound(playerSelection, computerSelection){
    // var getPlayerAnswer = window.prompt("Enter either Rock, Paper or Scissors");
-    playerSelectionAnswer = playerSelection.lowercase();
-    computerSelectionAnswer = computerSelection.lowercase();
+    playerSelectionAnswer = playerSelection.toLowerCase();
+    computerSelectionAnswer = computerSelection.toLowerCase();
 
     if (playerSelectionAnswer == computerSelectionAnswer){
         return "Draw!";
@@ -40,12 +40,14 @@ function getRockPaperScissorValue(){
 function computerPlay(){
    const RockPaperScissorArray = ["Rock", "Paper", "Scissors"];
     answer = getRockPaperScissorValue();
-    console.log(answer);
+   
     getAnswer=RockPaperScissorArray[answer];
-    console.log(getAnswer);
+    
     return(getAnswer);
   
 
 }
 
-computerPlay();
+const playerSelection = "rock";
+const computerSelection = computerPlay();
+console.log(playRound(playerSelection, computerSelection));
