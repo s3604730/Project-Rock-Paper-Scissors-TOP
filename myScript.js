@@ -62,8 +62,32 @@ function game() {
   let computerScore = 0;
   let playerScore = 0;
   for (let i = 0; i < 5; i++) {
-    const playerSelection = "Rock";
+    let playerSelection = window.prompt("Enter either Rock, Paper or Scissors");
     const computerSelection = computerPlay();
-    console.log(playRound(playerSelection, computerSelection));
+    result = playRound(playerSelection, computerSelection);
+    if(result.includes("Lose")){
+      console.log(result);
+      computerScore +=1;
+    }else if(result.includes("win")){
+      console.log(result);
+      playerScore +=1;
+    }else{
+      console.log(result);
+    }
   }
+
+
+  if(computerScore == playerScore){
+    console.log("Game is a draw!");
+
+  }else if (computerScore > playerScore){
+    console.log("Computer wins!");
+
+  }else{
+    console.log("Player Wins!");
+  }
+
 }
+
+
+game();
